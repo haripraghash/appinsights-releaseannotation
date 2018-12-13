@@ -11,7 +11,21 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  BuildPlatform: 'any cpu'
 
 steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+ - script: dotnet restore
+ - script: dotnet build --configuration $(buildConfiguration) 
+   displayName: 'dotnet build $(buildConfiguration)'
+
+ - task: DotNetCoreCLI@2
+   displayName: 'Publish build artifacts'
+   inputs:
+    command: publish
+    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    projects: StrikesRepository/StrikesRepository.csproj
+    publishWebProjects: false
+    modifyOutputPath: true
+    zipAfterPublish: true
+ 
+ - task: PublishBuildArtifacts@1
