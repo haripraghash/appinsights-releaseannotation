@@ -28,7 +28,7 @@ steps:
    inputs:
     command: publish
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    projects: StrikesRepository/StrikesRepository.csproj
+    projects: appinsights-releaseannotation/appinsights-releaseannotation/appinsights-releaseannotation.csproj
     publishWebProjects: false
     modifyOutputPath: true
     zipAfterPublish: true
