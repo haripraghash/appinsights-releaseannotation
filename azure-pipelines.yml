@@ -18,7 +18,7 @@ steps:
    displayName: 'Install .Net core 2.2 SDK'
    inputs:
     packageType: 'sdk'
-    version: '2.2'
+    version: '2.2.100'
  
  - script: dotnet build appinsights-releaseannotation/appinsights-releaseannotation.sln --configuration $(buildConfiguration) 
    displayName: 'dotnet build $(buildConfiguration)'
