@@ -14,7 +14,7 @@ variables:
   BuildPlatform: 'any cpu'
 
 steps:
- - script: dotnet restore
+ - script: dotnet restore ~/appinsights-releaseannotation/appinsights-releaseannotation.sln
  - script: dotnet build --configuration $(buildConfiguration) 
    displayName: 'dotnet build $(buildConfiguration)'
 
