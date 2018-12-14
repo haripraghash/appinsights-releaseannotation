@@ -122,7 +122,7 @@
           "apiVersion": "2015-08-01",
           "dependsOn": [
             "[resourceId('Microsoft.Web/sites', variables('webSiteName'))]",
-            "[resourceId('Microsoft.Web/sites', concat(variables('webSiteName'), '-appinsights'))]"
+            "[resourceId('Microsoft.Insights/components', concat(variables('webSiteName'), '-appinsights'))]"
           ],
           "tags": {
             "displayName": "app-settings"
