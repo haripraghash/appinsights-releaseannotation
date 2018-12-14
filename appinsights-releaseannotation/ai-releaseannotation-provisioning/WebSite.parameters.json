@@ -4,6 +4,12 @@
   "parameters": {
     "hostingPlanName": {
       "value": "test"
+    },
+    "tenantId": {
+      "value": ""
+    },
+    "objectId": {
+      "value": ""
     }
   }
 }
