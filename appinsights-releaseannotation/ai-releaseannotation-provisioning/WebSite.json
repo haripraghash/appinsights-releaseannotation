@@ -75,7 +75,7 @@
   "variables": {
     "webSiteName": "appinsights-releaseannotation-webapp",
     "identityResourceId": "[concat(resourceId('Microsoft.Web/sites', variables('webSiteName')),'/providers/Microsoft.ManagedIdentity/Identities/default')]",
-    "keyVaultName": "[concat('appinsights-releaseannotation-webapp', '-keyvault')]",
+    "keyVaultName": "[concat('appinsights', '-keyvault')]",
     "apiappinsights": "[concat(variables('webSiteName'), '-appinsights')]"
 
   },
