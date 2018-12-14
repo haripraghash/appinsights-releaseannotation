@@ -35,7 +35,7 @@
       "defaultValue": [
         "list",
         "get",
-        "create",
+        "set",
         "delete"
       ],
       "metadata": {
